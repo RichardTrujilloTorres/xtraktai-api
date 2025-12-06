@@ -1,8 +1,12 @@
-# 📊 Invoice API vs Receipt API - Complete Comparison
+# 📊 Invoice API vs XtraktAI API - Comparison
+
+📖 [Docs](README.md) · 🚀 [Quick Start](QUICKSTART.md) · 🏗 [Architecture](ARCHITECTURE.md) · ⚖️ **Comparison**
+
+---
 
 ## 🎯 Overview
 
-This document provides a detailed comparison between the **nvola-api** (invoice processor) and our new **receipt-api** (receipt processor).
+This document provides a detailed comparison between the **nvola-api** (invoice processor) and **XtraktAI API** (receipt processor).
 
 ---
 
@@ -10,7 +14,7 @@ This document provides a detailed comparison between the **nvola-api** (invoice 
 
 ### Purpose & Use Case
 
-| Aspect | Invoice API (nvola-api) | Receipt API |
+| Aspect | Invoice API (nvola-api) | XtraktAI API |
 |--------|------------------------|-------------|
 | **Primary Use** | B2B billing & accounting | B2C retail & expense tracking |
 | **Document Type** | Formal invoices | Retail receipts |
@@ -93,7 +97,7 @@ This document provides a detailed comparison between the **nvola-api** (invoice 
 }
 ```
 
-### Receipt API Response
+### XtraktAI API Response
 ```json
 {
   "status": "success",
@@ -212,7 +216,7 @@ apply_payment_terms(invoice['payment_terms'])
 
 ---
 
-### When to Use Receipt API
+### When to Use XtraktAI API
 
 #### 1. Expense Reimbursement
 ```python
@@ -264,7 +268,7 @@ Extract retail receipt data:
 
 ## 📊 Performance Comparison
 
-| Metric | Invoice API | Receipt API | Notes |
+| Metric | Invoice API | XtraktAI API | Notes |
 |--------|------------|-------------|-------|
 | Avg Processing Time | 3-8 sec | 3-8 sec | Same |
 | OCR Complexity | Medium | Medium-High | Receipts often smaller print |
@@ -317,7 +321,7 @@ class UnifiedDocument:
 - Multi-page invoices
 - Special payment terms
 
-### Receipt API Challenges
+### XtraktAI API Challenges
 - Small, faded print
 - Thermal paper degradation
 - Variable layouts across stores
@@ -336,7 +340,7 @@ class UnifiedDocument:
 - Often contains PII
 - May require encryption at rest
 
-### Receipt API Concerns
+### XtraktAI API Concerns
 - Personal spending data
 - Payment card information
 - Location tracking (store address)
@@ -368,7 +372,7 @@ class UnifiedDocument:
 - May need higher uptime SLAs
 - Integration with accounting software
 
-### Receipt API
+### XtraktAI API
 - Can be public-facing (with auth)
 - Higher volume, needs scaling
 - Can tolerate brief downtime
@@ -387,7 +391,7 @@ concurrent_requests: 10-20
 database: Required for tracking
 ```
 
-### Receipt API
+### XtraktAI API
 ```yaml
 # Recommended deployment
 instances: 3-5 (auto-scale)
@@ -411,7 +415,7 @@ class InvoiceData(BaseModel):
     contract_number: Optional[str] = None
 ```
 
-#### To Receipt API:
+#### To XtraktAI API:
 ```python
 # Add loyalty_points field
 class ReceiptMetadata(BaseModel):
@@ -423,7 +427,7 @@ class ReceiptMetadata(BaseModel):
 
 ## 📚 Summary
 
-| Aspect | Invoice API | Receipt API | Best For |
+| Aspect | Invoice API | XtraktAI API | Best For |
 |--------|-------------|-------------|----------|
 | **Document Type** | Formal invoices | Retail receipts | Different contexts |
 | **Payment Model** | Credit/terms | Immediate | B2B vs B2C |
@@ -448,7 +452,7 @@ class ReceiptMetadata(BaseModel):
 - You need formal document tracking
 - Integration with accounting systems is priority
 
-### Choose Receipt API When:
+### Choose XtraktAI API When:
 - Primary focus is B2C/retail transactions
 - Expense tracking and reimbursement is the goal
 - Mobile-first approach is needed
@@ -459,7 +463,7 @@ class ReceiptMetadata(BaseModel):
 ## 🔗 Related Resources
 
 - [Invoice API Documentation](https://github.com/RichardTrujilloTorres/nvola-api)
-- [Receipt API Documentation](./README.md)
+- [XtraktAI API Documentation](./README.md)
 - [FastAPI Best Practices](https://fastapi.tiangolo.com/tutorial/)
 - [OpenAI API Pricing](https://openai.com/pricing)
 

@@ -1,19 +1,23 @@
-# 🧾 Receipt Processing API
+# 🧾 XtraktAI API
 
 **AI-powered receipt extraction microservice**  
 Built with ❤️ using
 
+[![Tests](https://github.com/RichardTrujilloTorres/xtraktai-api/actions/workflows/tests.yml/badge.svg)](https://github.com/RichardTrujilloTorres/xtraktai-api/actions/workflows/tests.yml)
+[![Coverage](https://img.shields.io/badge/coverage-98%25-brightgreen)](https://github.com/RichardTrujilloTorres/xtraktai-api)
 [![Python](https://img.shields.io/badge/Python-3.11-blue?logo=python&logoColor=white)](https://www.python.org/)
 [![FastAPI](https://img.shields.io/badge/FastAPI-0.111+-009688?logo=fastapi&logoColor=white)](https://fastapi.tiangolo.com/)
 [![OpenAI](https://img.shields.io/badge/OpenAI-API-412991?logo=openai&logoColor=white)](https://openai.com/)
 [![Docker](https://img.shields.io/badge/Docker-Ready-2496ED?logo=docker&logoColor=white)](https://www.docker.com/)
 [![OCR](https://img.shields.io/badge/OCR-Tesseract-FF6F00?logo=google&logoColor=white)](https://github.com/tesseract-ocr/tesseract)
 
+📖 **Docs** · 🚀 [Quick Start](QUICKSTART.md) · 🏗 [Architecture](ARCHITECTURE.md) · ⚖️ [Comparison](COMPARISON.md)
+
 ---
 
 ## 🧠 Overview
 
-**Receipt Processing API** is a microservice that processes receipt files (PDFs, images, etc.) using OCR and LLMs to produce clean, normalized JSON output.
+**XtraktAI API** is a microservice that processes receipt files (PDFs, images, etc.) using OCR and LLMs to produce clean, normalized JSON output.
 
 Perfect for expense tracking apps, accounting systems, or any application that needs to digitize and structure receipt data.
 
@@ -99,8 +103,8 @@ Perfect for expense tracking apps, accounting systems, or any application that n
 ### 1️⃣ Clone the repo
 
 ```bash
-git clone https://github.com/yourusername/receipt-api.git
-cd receipt-api
+git clone https://github.com/RichardTrujilloTorres/xtraktai-api.git
+cd xtraktai-api
 ```
 
 ### 2️⃣ Set up environment
@@ -140,7 +144,7 @@ curl -X POST http://localhost:8000/process-receipt \
 ## 🧠 Project Structure
 
 ```
-receipt-api/
+xtraktai-api/
 ├── app/
 │   ├── __init__.py         # Package initialization
 │   ├── main.py             # FastAPI application entrypoint
@@ -363,7 +367,7 @@ docs(readme): update installation instructions
 
 ## 📜 License
 
-MIT © 2024 — Receipt Processing API
+MIT © 2024 — XtraktAI API
 
 ---
 
@@ -378,4 +382,4 @@ MIT © 2024 — Receipt Processing API
 
 Built with 🧠, ☕, and ❤️ for better expense tracking.
 
-**Questions? Issues? → [Open an issue](https://github.com/yourusername/receipt-api/issues)**
+**Questions? Issues? → [Open an issue](https://github.com/RichardTrujilloTorres/xtraktai-api/issues)**

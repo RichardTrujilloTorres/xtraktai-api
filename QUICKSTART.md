@@ -1,4 +1,8 @@
-# 🚀 Quick Start Guide - Receipt Processing API
+# 🚀 Quick Start Guide - XtraktAI API
+
+📖 [Docs](README.md) · 🚀 **Quick Start** · 🏗 [Architecture](ARCHITECTURE.md) · ⚖️ [Comparison](COMPARISON.md)
+
+---
 
 ## ⚡ 5-Minute Setup
 
@@ -8,7 +12,7 @@
 
 ### Step 1: Set Up Environment
 ```bash
-cd receipt-api
+cd xtraktai-api
 cp .env.example .env
 ```
 

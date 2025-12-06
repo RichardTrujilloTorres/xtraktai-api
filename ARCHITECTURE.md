@@ -1,4 +1,8 @@
-# 🏗️ Receipt API - Architecture Diagram
+# 🏗️ XtraktAI API - Architecture
+
+📖 [Docs](README.md) · 🚀 [Quick Start](QUICKSTART.md) · 🏗 **Architecture** · ⚖️ [Comparison](COMPARISON.md)
+
+---
 
 ## System Architecture
 
@@ -344,7 +348,7 @@ Request Received
 ## Monitoring & Observability
 
 ```
-                    Receipt API
+                    XtraktAI API
                          │
           ┌──────────────┼──────────────┐
           │              │              │
