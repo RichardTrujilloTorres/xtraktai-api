@@ -1,0 +1,24 @@
+version: '3.8'
+
+services:
+  receipt-api:
+    build: .
+    container_name: receipt-api
+    ports:
+      - "8000:8000"
+    environment:
+      - OPENAI_API_KEY=${OPENAI_API_KEY}
+      - MODEL_NAME=${MODEL_NAME:-gpt-4o-mini}
+      - INCLUDE_RAW_TEXT=${INCLUDE_RAW_TEXT:-false}
+      - MAX_FILE_SIZE_MB=${MAX_FILE_SIZE_MB:-10}
+    env_file:
+      - .env
+    volumes:
+      - ./app:/app/app
+    restart: unless-stopped
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://localhost:8000/health"]
+      interval: 30s
+      timeout: 3s
+      retries: 3
+      start_period: 5s
