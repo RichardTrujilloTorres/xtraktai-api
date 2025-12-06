@@ -1,0 +1,29 @@
+{
+  "merchant_name": "Whole Foods Market",
+  "receipt_number": "0012-34567-8901",
+  "receipt_date": "2024-12-05",
+  "receipt_time": "14:32",
+  "subtotal": 45.67,
+  "tax_amount": 3.89,
+  "discount_amount": 2.50,
+  "total_amount": 47.06,
+  "currency": "USD",
+  "line_items": [
+    {
+      "description": "Organic Bananas",
+      "quantity": 2.5,
+      "unit_price": 0.79,
+      "total_price": 1.98
+    },
+    {
+      "description": "Almond Milk 64oz",
+      "quantity": 1,
+      "unit_price": 4.99,
+      "total_price": 4.99
+    }
+  ],
+  "metadata": {
+    "store_location": "123 Main St, San Francisco",
+    "payment_method": "Credit Card"
+  }
+}

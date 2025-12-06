@@ -1,0 +1,12 @@
+{
+  "merchant_name": "Unknown Store",
+  "receipt_date": null,
+  "receipt_time": null,
+  "subtotal": null,
+  "tax_amount": null,
+  "discount_amount": null,
+  "total_amount": 19.99,
+  "currency": "USD",
+  "line_items": [],
+  "metadata": {}
+}
